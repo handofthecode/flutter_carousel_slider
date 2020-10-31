@@ -11,13 +11,13 @@ abstract class CarouselController {
 
   Future<Null> get onReady;
 
-  Future<void> nextPage({Duration duration, Curve curve});
+  Future<void> nextPage({Duration duration, Curve curve, bool reasonIsController});
 
-  Future<void> previousPage({Duration duration, Curve curve});
+  Future<void> previousPage({Duration duration, Curve curve, bool reasonIsController});
 
-  void jumpToPage(int page);
+  void jumpToPage(int page, {bool reasonIsController});
 
-  Future<void> animateToPage(int page, {Duration duration, Curve curve});
+  Future<void> animateToPage(int page, {Duration duration, Curve curve, bool reasonIsController});
 
   void startAutoPlay();
 
